@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线文本转图片 在线文字转图片 Text to Image</title>
+    <meta name="description" content="在线将文本实时转换为图片，支持 PNG 格式的生成。并支持获取图片分享链接。">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="moon-sun-toggle" id="toggle-dark-mode">
+        <span class="moon">🌙</span>
+        <span class="sun">🌞</span>
+    </div>
+    <h1 class="mb-4">
+        <a href="javascript:void(0);" onclick="location.reload();" style="text-decoration: none; color: #007BFF;">
+            文本转图片
+        </a>
+    </h1>
+    <textarea id="text-input" placeholder="输入文本..." aria-label="文本输入框"></textarea>
+    <div class="controls">
+        <label>
+            背景颜色
+            <input type="color" id="bg-color" value="#ffffff" aria-label="背景颜色">
+        </label>
+        <label>
+            字体大小
+            <input type="number" id="font-size" value="16" min="1" aria-label="字体大小">
+        </label>
+        <label>
+            字体颜色
+            <input type="color" id="font-color" value="#000000" aria-label="字体颜色">
+        </label>
+    </div>
+    <div class="preview">
+        <img id="preview-img" alt="预览">
+    </div>
+    <div class="controls">
+        <label>
+            过期时间
+            <input type="datetime-local" id="expiry-time" aria-label="图片过期时间">
+        </label>
+        <label>
+            <input type="checkbox" id="permanent" aria-label="永久保存">
+            永久保存
+        </label>
+    </div>
+    <button id="share-button" class="share-button" tabindex="0">分享图片</button>
+    <div id="toast" class="toast"></div>
+    <div class="links-section" id="links-section">
+        <div class="link" id="url-link">
+            <span>URL</span>
+            <button id="copy-url-button" onclick="copyToClipboard('url')" disabled>复制</button>
+            <span id="url" class="hidden"></span>
+        </div>
+        <div class="link" id="markdown-link">
+            <span>Markdown</span>
+            <button id="copy-markdown-button" onclick="copyToClipboard('markdown')" disabled>复制</button>
+            <span id="markdown" class="hidden"></span>
+        </div>
+        <div class="link" id="bbcode-link">
+            <span>BBCode</span>
+            <button id="copy-bbcode-button" onclick="copyToClipboard('bbcode')" disabled>复制</button>
+            <span id="bbcode" class="hidden"></span>
+        </div>
+    </div>
+    <!-- 无非必要，请不要去除广告，毕竟此广告不影响美观，谢谢！ -->
+    <!-- 自部署此网页请在下面加上“FCB” ，谢谢-->
+    <footer style="text-align: center; padding: 20px;">
+        <a href="https://test.gwwc.net/categories/netcup" style="display: inline-block; vertical-align: middle;">
+            <img src="https://img.gwwc.net/up/netcup_logo.svg" width="110" height="50" alt="IMG"
+                style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+        </a>
+        <a href="https://www.netcup.com/de/server/guenstige-vserver-angebote?ref=216545"
+            style="display: inline-block; vertical-align: middle; margin-left: 5px; font-size: 16px; color: #007BFF; text-decoration: none; font-weight: bold;">
+            One Euro VPS
+        </a>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

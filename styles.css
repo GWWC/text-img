@@ -1,0 +1,255 @@
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #e9ecef;
+            color: #212529;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dark-mode {
+            background-color: #343a40;
+            color: #f8f9fa;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        h1:hover {
+            color: #007bff;
+        }
+
+        textarea {
+            width: 90%;
+            max-width: 600px;
+            height: 150px;
+            padding: 12px;
+            margin: 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            resize: vertical;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        .dark-mode textarea {
+            background-color: #495057;
+            color: #f8f9fa;
+            border-color: #6c757d;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        .controls label {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .controls input[type="color"],
+        .controls input[type="number"] {
+            width: 60px;
+            margin-left: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .controls input[type="datetime-local"] {
+            width: 180px;
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            margin-left: 10px;
+            transition: border-color 0.3s;
+        }
+
+        .dark-mode .controls input[type="datetime-local"] {
+            background-color: #495057;
+            color: #f8f9fa;
+            border-color: #6c757d;
+        }
+
+        .controls input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .preview {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            max-width: 600px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .dark-mode .preview {
+            background-color: #6c757d;
+            border-color: #495057;
+        }
+
+        .preview img {
+            max-width: 100%;
+            max-height: 80vh;
+        }
+
+        .share-options {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            gap: 20px;
+        }
+
+        .share-options label {
+            font-size: 16px;
+        }
+
+        .share-button {
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .share-button:hover {
+            background-color: #0056b3;
+        }
+
+        .share-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #ffffff;
+            color: #333;
+            padding: 12px 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transition: opacity 0.5s;
+            z-index: 1000;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .toast.show {
+            opacity: 1;
+        }
+
+        .links-section {
+            width: 90%;
+            max-width: 600px;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .links-section .link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .links-section .link button {
+            border: none;
+            background: #007bff;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .links-section .link button:hover {
+            background-color: #0056b3;
+        }
+
+        .links-section .link button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .links-section .link .hidden {
+            display: none;
+        }
+
+        .dark-mode .links-section {
+            background-color: #495057;
+            border-color: #343a40;
+        }
+
+        .moon-sun-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 24px;
+            color: #212529;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .dark-mode .moon-sun-toggle {
+            color: #f8f9fa;
+        }
+
+        .moon-sun-toggle span {
+            font-size: 24px;
+        }
+
+        .moon-sun-toggle .sun {
+            display: none;
+        }
+
+        .dark-mode .moon-sun-toggle .sun {
+            display: block;
+        }
+
+        .moon-sun-toggle .moon {
+            display: block;
+        }
+
+        .dark-mode .moon-sun-toggle .moon {
+            display: none;
+        }
